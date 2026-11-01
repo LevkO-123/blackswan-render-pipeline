@@ -11,3 +11,6 @@ Python 3.12; pip install -r requirements.txt; python cloud_test.py.
 Existing synthesis/edit graph/one-generation H264 encode and black/silence/decode QA preserved. Linux font switched to DejaVu Sans. Output 1080x1920, no upscale/fake8K. This 8.4-second fixture is NOT a new episode. Full human viewing/listening and YouTube Checks remain separate gates.
 
 Source evidence: sources.json and https://www.pexels.com/license/ . No endorsement or standalone stock redistribution. Source audio excluded; existing original score is synthesized locally, not presented as a real engine.
+
+## Portable batch and publication gate
+`batch_worker.py production_queue.json /absolute/production/root` resumes licensed manifests on an authorized host. It caches renderer, source and voice hashes. It never uploads/publishes. `release_gate.py review.json video.mp4` requires file-bound full AV review, rights and YouTube Checks/HD evidence. Run `python -m unittest test_release_gate.py`. Synthetic test records are used only in tests. No credentials or production uploads are configured. Current media readiness is tracked privately; public repository holds software only.

@@ -12,3 +12,8 @@ __pycache__/
 *token*
 BlackSwan_Production/Cloud_Integration_Test/
 BlackSwan_Production/assets/
+
+tmp/
+cloud_artifact/
+production_queue.json
+batch_status.json
