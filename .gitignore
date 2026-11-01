@@ -1,0 +1,14 @@
+__pycache__/
+.runtime/
+*.mp4
+*.wav
+*.jpg
+*.png
+*.log
+*.zip
+.env*
+*credentials*
+*cookies*
+*token*
+BlackSwan_Production/Cloud_Integration_Test/
+BlackSwan_Production/assets/

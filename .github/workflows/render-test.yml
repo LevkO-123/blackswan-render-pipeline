@@ -1,0 +1,42 @@
+name: Renderer integration test
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'BlackSwan_Production/**'
+      - 'cloud_test.py'
+      - 'sources.json'
+      - 'requirements.txt'
+      - '.github/workflows/render-test.yml'
+permissions:
+  contents: read
+concurrency:
+  group: renderer-integration
+  cancel-in-progress: false
+jobs:
+  render:
+    if: github.repository_visibility == 'public'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install --disable-pip-version-check -r requirements.txt
+      - name: Render and validate existing pipeline
+        run: python cloud_test.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: blackswan-renderer-integration
+          retention-days: 1
+          compression-level: 0
+          if-no-files-found: error
+          path: |
+            BlackSwan_Production/Cloud_Integration_Test/Cloud_Integration_Test.mp4
+            BlackSwan_Production/Cloud_Integration_Test/cloud_result.json
+            BlackSwan_Production/Cloud_Integration_Test/technical_qa.log
+            BlackSwan_Production/Cloud_Integration_Test/titles.ass
+            sources.json

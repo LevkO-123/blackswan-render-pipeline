@@ -1,0 +1,47 @@
+{
+  "id": "Cloud_Integration_Test",
+  "title": "Software integration fixture - NOT FOR PUBLICATION",
+  "rights_checked": true,
+  "visual_identity_checked": true,
+  "bpm": 100,
+  "shots": [
+    {
+      "asset": "16244863",
+      "in": 0.1,
+      "duration": 1.2
+    },
+    {
+      "asset": "16244862",
+      "in": 0.2,
+      "duration": 2.4
+    },
+    {
+      "asset": "16244863",
+      "in": 1.5,
+      "duration": 2.4
+    },
+    {
+      "asset": "16244862",
+      "in": 2.7,
+      "duration": 2.4
+    }
+  ],
+  "captions": [
+    [
+      0,
+      2.3,
+      "THE CITY CAN WAIT."
+    ],
+    [
+      3,
+      5.8,
+      "AFTER HOURS."
+    ],
+    [
+      6,
+      8.3,
+      "BLACK SWAN"
+    ]
+  ],
+  "publish_approved": false
+}
